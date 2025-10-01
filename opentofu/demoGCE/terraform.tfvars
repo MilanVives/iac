@@ -8,5 +8,5 @@ gcp_project = "tf-gcp-96199"
 gcp_region  = "europe-central2"
 gcp_zone    = "europe-central2-a"
 # the lcoation of the security file downloaded from GCP
-gcp_key_file = "~/dev/iac/opentofu/accesskey/service-account.json"
+gcp_key_file = "../accesskeyGCE/service-account.json"
 
