@@ -1,4 +1,5 @@
 opentofu/accesskeyGCE/service-account.json
+**/accesskey/service-account.json
 opentofu/demo/.terraform/
 opentofu/demo/.terraform*
 opentofu/demo/terraform.tfstate*
