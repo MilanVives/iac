@@ -2,3 +2,10 @@ opentofu/accesskeyGCE/service-account.json
 opentofu/demo/.terraform/
 opentofu/demo/.terraform*
 opentofu/demo/terraform.tfstate*
+
+# Terraform/OpenTofu files
+**/.terraform/
+**/.terraform.lock.hcl
+**/terraform.tfstate
+**/terraform.tfstate.backup
+#**/*.tfvars
