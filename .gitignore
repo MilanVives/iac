@@ -1,4 +1,13 @@
-opentofu/accesskeyGCE/service-account.json
-opentofu/demo/.terraform/
-opentofu/demo/.terraform*
-opentofu/demo/terraform.tfstate*
+opentofuGCEEngine/accesskey/service-account.json
+opentofuGCEEngine/demo/.terraform/
+opentofuGCEEngine/demo/.terraform*
+opentofuGCEEngine/demo/terraform.tfstate*
+.DS_Store
+
+# Terraform/OpenTofu files
+**/accesskey/service-account.json
+**/.terraform/
+**/.terraform.lock.hcl
+**/terraform.tfstate
+**/terraform.tfstate.backup
+#**/*.tfvars
