@@ -15,3 +15,6 @@ ansible-playbook playbook-createfile.yml
 
 #run playbook in ubuntu64 servers from local hosts file with max verbosity
 ansible-playbook -i hosts playbook-install-nvim-ubuntuAMD64.yaml -vvvv
+
+#install git, docker and docker compose on the GCE ubuntu vm [lesdemo]
+ansible-playbook -i hosts playbook-install-docker-gce.yaml

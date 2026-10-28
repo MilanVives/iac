@@ -37,7 +37,7 @@ metadata = {
   sshKeys = "${var.gce_ssh_user}:${file(var.gce_ssh_pub_key_file)}"
   }
 
-tags = ["ssh-server"]
+tags = ["ssh-server", "web-server"]
 
 }
 
@@ -58,6 +58,20 @@ resource "google_compute_firewall" "ssh-server" {
   // Allow traffic from everywhere to instances with an ssh-server tag
   source_ranges = ["0.0.0.0/0"]
   target_tags   = ["ssh-server"]
+}
+
+resource "google_compute_firewall" "web-server" {
+  name    = "default-allow-http-https-terraform"
+  network = google_compute_network.vpc_network.name
+
+  allow {
+    protocol = "tcp"
+    ports    = ["80", "443"]
+  }
+
+  // Allow HTTP/HTTPS from everywhere to instances with a web-server tag
+  source_ranges = ["0.0.0.0/0"]
+  target_tags   = ["web-server"]
 }
 
 output "ip" {
